@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float Vin;
+    float LedAzulb;
+    float ResledAzul;
+    float VledAzul;
+    float IledAzul;
+    float VR;
+
+    float Ledverde;
+    float Resledverde;
+    float Volledverde;
+    float Iledverde;
+    float VolR1;
+
+     float Ledamarillostotal;
+    float Resledamarillostotal;
+    float Volledamarillostotal;
+    float Iledamarillostotal;
+    float VR2;
+
+
+    VledAzul= 5;
+    IledAzul= 0.19;
+        Volledverde= 4;
+    Iledverde= 0.02;
+
+    Volledamarillostotal= 4.32;
+    Iledamarillostotal= 0.045;
+
+    printf("ingresa el valor del voltaje");
+    scanf ("%f",&Vin);
+    printf("Voltaje de alimentacion= %f",Vin);
+
+    VR= Vin-VledAzul;
+    ResledAzul= VR/IledAzul;
+
+    printf("Resistencia para el Led azul brillante= %f",ResledAzul);
+
+    printf("Voltaje de alimentacion= %lf",Vin);
+    VolR1= Vin-Volledverde;
+    Resledverde= VolR1/Iledverde;
+
+    printf("Resistencia para el Led verde brillante= %lf",Resledverde);
+
+    printf("Voltaje de alimentacion= %lf",Vin);
+    VR2= Vin-Volledamarillostotal;
+    Resledamarillostotal= VR2/Iledamarillostotal;
+
+
+
+    printf("Resistencia para el Led amarillostd= %f",Resledamarillostotal);
+
+
+    return 0;
+}
